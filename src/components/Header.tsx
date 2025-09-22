@@ -11,10 +11,40 @@ export const Header: React.FC = () => {
         </Link>
       </div>
       <nav className={styles.nav} aria-label="Main Navigation">
-        <Link className={styles.link} to="/">
+        <Link className={styles.link} activeClassName={styles.active} to="/">
           Home
         </Link>
-        {/* Add more links as you create pages */}
+        <Link
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/chi-siamo"
+        >
+          Chi Siamo
+        </Link>
+        <Link
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/servizi"
+        >
+          Servizi
+        </Link>
+        <Link
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/documenti"
+        >
+          Documenti
+        </Link>
+        <Link
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/diventa-socio"
+        >
+          Diventa Socio
+        </Link>
+        <Link className={styles.cta} to="/donate">
+          Dona ora!
+        </Link>
       </nav>
     </header>
   );

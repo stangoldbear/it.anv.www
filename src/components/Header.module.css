@@ -14,7 +14,8 @@
 
 .nav {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 16px;
 }
 
 .link {
@@ -25,4 +26,25 @@
 
 .link:hover {
   text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: #663399;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #663399;
+}
+
+.cta:hover {
+  background-color: #522a7a;
+  border-color: #522a7a;
 }
