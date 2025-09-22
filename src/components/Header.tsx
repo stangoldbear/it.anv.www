@@ -13,14 +13,42 @@ export const Header: React.FC = () => {
         Associazione Nuova Vita
       </Link>
       <nav className={styles.nav} aria-label="Main Navigation">
-        <Link className={styles.link} activeClassName={styles.active} to="/">Home</Link>
-        <Link className={styles.link} activeClassName={styles.active} to="/chi-siamo">Chi Siamo</Link>
-        <Link className={styles.link} activeClassName={styles.active} to="/servizi">Servizi</Link>
-        <Link className={styles.link} activeClassName={styles.active} to="/documenti">Documenti</Link>
-        <Link className={styles.link} activeClassName={styles.active} to="/diventa-socio">Diventa Socio</Link>
+        <Link className={styles.link} activeClassName={styles.active} to="/">
+          Home
+        </Link>
+        <Link
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/chi-siamo"
+        >
+          Chi Siamo
+        </Link>
+        <Link
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/servizi"
+        >
+          Servizi
+        </Link>
+        <Link
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/documenti"
+        >
+          Documenti
+        </Link>
+        <Link
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/diventa-socio"
+        >
+          Diventa Socio
+        </Link>
       </nav>
       <div className={styles.right}>
-        <Link className={styles.cta} to="/donate">Dona ora!</Link>
+        <Link className={styles.cta} to="/donate">
+          Dona ora!
+        </Link>
       </div>
     </header>
   );
