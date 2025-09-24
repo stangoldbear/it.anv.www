@@ -116,7 +116,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: min(85vw, 360px);
+  width: min(75vw, 300px);
   height: 100%;
   background: var(--bg);
   border-left: 1px solid var(--border);
@@ -124,6 +124,8 @@
   box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
   transform: translateX(100%);
   transition: transform 200ms ease-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .overlayNav {
@@ -140,6 +142,7 @@
   font-size: 28px;
   line-height: 1;
   cursor: pointer;
+  align-self: flex-end;
 }
 
 /* Responsive: under 740px switch to hamburger */
@@ -150,6 +153,24 @@
 
   .menuButton {
     display: inline-block;
+  }
+
+  /* Bigger, easier-to-tap overlay items on mobile */
+  .overlayNav {
+    gap: 8px;
+  }
+
+  .overlayNav .link {
+    display: block;
+    font-size: 18px; /* larger text for readability */
+    line-height: 1.4;
+    padding: 12px 8px; /* ~44px min touch target height with line-height */
+    border-radius: 6px;
+  }
+
+  .closeButton {
+    padding: 10px; /* increase hit area */
+    margin: -10px -10px 0 0; /* optical alignment without shifting layout */
   }
 }
 
