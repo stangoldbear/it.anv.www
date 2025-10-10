@@ -1,0 +1,208 @@
+# MDX Frontmatter Schema Contract
+#
+# This schema defines the required and optional frontmatter fields for all MDX
+# content files in /content/pages/. It ensures consistency, validates content
+# at build time, and serves as documentation for content authors.
+#
+# Version: 1.0.0
+# Last Updated: 2025-10-10
+
+$schema: http://json-schema.org/draft-07/schema#
+$id: https://www.assonuovavita.it/schemas/mdx-frontmatter.json
+title: MDX Page Frontmatter
+description: Schema for frontmatter metadata in MDX content pages
+
+type: object
+required:
+  - title
+  - description
+  - slug
+  - date
+
+properties:
+  title:
+    type: string
+    minLength: 1
+    maxLength: 70
+    description: |
+      Page title displayed in browser tab and as main heading (h1).
+      Should be concise and descriptive.
+    examples:
+      - "Chi Siamo"
+      - "Servizi per la Comunità"
+      - "Dona Ora"
+
+  description:
+    type: string
+    minLength: 50
+    maxLength: 160
+    description: |
+      Meta description for SEO and social sharing. Appears in search results
+      and when shared on social media. Must be between 50-160 characters for
+      optimal display.
+    examples:
+      - "Scopri la storia, i valori e la missione di Associazione Nuova Vita"
+      - "I servizi che offriamo alla comunità per supportare le persone in difficoltà"
+
+  slug:
+    type: string
+    pattern: ^/[a-z0-9-/]*$
+    description: |
+      URL path for the page. Must start with a forward slash and contain only
+      lowercase letters, numbers, hyphens, and forward slashes. No spaces or
+      special characters allowed.
+    examples:
+      - "/"
+      - "/chi-siamo"
+      - "/5x1000"
+      - "/diventa-socio"
+
+  date:
+    type: string
+    format: date
+    pattern: ^\d{4}-\d{2}-\d{2}$
+    description: |
+      Publication or last updated date in ISO 8601 format (YYYY-MM-DD).
+      Used for sorting pages and displaying timestamps.
+    examples:
+      - "2025-10-10"
+      - "2025-01-15"
+
+  template:
+    type: string
+    enum:
+      - page
+      - landing-page
+    default: page
+    description: |
+      Template component used to render this page. Defaults to 'page' if not
+      specified. Must match an existing template file in src/templates/.
+    examples:
+      - "page"
+      - "landing-page"
+
+  showInNav:
+    type: boolean
+    default: true
+    description: |
+      Whether to display this page in the main navigation menu. Set to false
+      for pages that should not appear in the header navigation (e.g., thank
+      you pages, legal pages).
+    examples:
+      - true
+      - false
+
+  navOrder:
+    type: integer
+    minimum: 0
+    description: |
+      Sort order in the navigation menu. Lower numbers appear first. Homepage
+      should use 0. Leave undefined for pages where showInNav is false.
+    examples:
+      - 0
+      - 10
+      - 20
+      - 30
+
+  metaImage:
+    type: string
+    pattern: ^\.\/images\/.*\.(jpg|jpeg|png|webp)$
+    description: |
+      Relative path to an image for Open Graph and Twitter Card social sharing.
+      Path must start with './images/' and end with a valid image extension.
+      Image should be at least 1200x630px for optimal display.
+    examples:
+      - "./images/chi-siamo-og.jpg"
+      - "./images/hero-homepage.png"
+
+additionalProperties: false
+
+# Example Valid Frontmatter:
+#
+# ---
+# title: Chi Siamo
+# description: Scopri la storia, i valori e la missione di Associazione Nuova Vita
+# slug: /chi-siamo
+# date: 2025-10-10
+# template: page
+# showInNav: true
+# navOrder: 10
+# metaImage: ./images/chi-siamo-og.jpg
+# ---
+
+# Page-Specific Constraints:
+#
+# Homepage (index.mdx):
+#   - slug: must be "/"
+#   - navOrder: should be 0
+#   - showInNav: should be true
+#
+# Standard Pages (chi-siamo, servizi, etc.):
+#   - slug: must be unique and descriptive
+#   - navOrder: must be > 0 if showInNav is true
+#   - template: typically "page"
+#
+# Special Pages (donate, 5x1000):
+#   - slug: must match expected paths (/donate, /5x1000)
+#   - showInNav: should be true (these are important CTAs)
+#   - navOrder: should be higher than informational pages
+#
+# Hidden Pages:
+#   - showInNav: false
+#   - navOrder: can be omitted
+
+# Validation Rules:
+#
+# 1. Title Length: Keep titles under 70 characters to prevent truncation in
+#    browser tabs and search results.
+#
+# 2. Description Length: Optimal length is 120-155 characters. Search engines
+#    may truncate longer descriptions.
+#
+# 3. Slug Format: Use lowercase and hyphens for readability and SEO. Italian
+#    characters (à, è, ì, ò, ù) should be replaced with ASCII equivalents
+#    (a, e, i, o, u) in slugs.
+#
+# 4. Date Format: Always use ISO 8601 (YYYY-MM-DD) for consistency and proper
+#    sorting. Dates in the future are allowed for scheduled content.
+#
+# 5. Navigation Order: Leave gaps between numbers (10, 20, 30) to allow for
+#    inserting new pages without renumbering all pages.
+#
+# 6. Meta Images: Images should be 1200x630px (Open Graph recommended size).
+#    Ensure images are optimized (< 200KB) for fast sharing.
+
+# Build-Time Validation:
+#
+# This schema should be validated during the Gatsby build process using a JSON
+# Schema validator (e.g., Ajv) or Zod schema in gatsby-node.ts. Invalid
+# frontmatter should cause the build to fail with a clear error message
+# indicating which field is invalid and in which file.
+#
+# Example validation code (TypeScript + Zod):
+#
+# import { z } from 'zod';
+#
+# const PageFrontmatterSchema = z.object({
+#   title: z.string().min(1).max(70),
+#   description: z.string().min(50).max(160),
+#   slug: z.string().regex(/^\/[a-z0-9-/]*$/),
+#   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+#   template: z.enum(['page', 'landing-page']).default('page'),
+#   showInNav: z.boolean().default(true),
+#   navOrder: z.number().int().nonnegative().optional(),
+#   metaImage: z.string().regex(/^\.\/images\/.*\.(jpg|jpeg|png|webp)$/).optional(),
+# });
+#
+# // In gatsby-node.ts:
+# export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, reporter }) => {
+#   if (node.internal.type === 'Mdx') {
+#     try {
+#       PageFrontmatterSchema.parse(node.frontmatter);
+#     } catch (error) {
+#       reporter.panicOnBuild(
+#         `Invalid frontmatter in ${node.internal.contentFilePath}: ${error.message}`
+#       );
+#     }
+#   }
+# };
