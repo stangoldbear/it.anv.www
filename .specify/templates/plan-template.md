@@ -31,7 +31,16 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Verify compliance with `.specify/memory/constitution.md` principles:
+
+- [ ] **Accessibility First (WCAG AA)**: Feature design includes keyboard navigation, ARIA labels, contrast requirements
+- [ ] **Content-Driven Architecture (MDX)**: Content separated from presentation, uses design-system components
+- [ ] **SEO & Performance**: Metadata defined, images optimized, performance budget considered
+- [ ] **Design System Consistency**: Uses tokens for colors/spacing/typography, no magic numbers
+- [ ] **TypeScript Quality**: Strict types planned, no `any` types, interfaces defined
+- [ ] **Testing Discipline**: Critical paths identified for unit testing
+
+*If any principle cannot be met, document justification in Complexity Tracking section below.*
 
 ## Project Structure
 

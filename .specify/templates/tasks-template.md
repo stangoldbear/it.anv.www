@@ -154,6 +154,19 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] TXXX Security hardening
 - [ ] TXXX Run quickstart.md validation
 
+## Phase N+1: Constitution Compliance Verification
+
+**Purpose**: Verify all constitutional requirements are met
+
+- [ ] TXXX Accessibility audit: Keyboard navigation test all interactive elements
+- [ ] TXXX Accessibility audit: Screen reader test (VoiceOver/NVDA) on key flows
+- [ ] TXXX Accessibility audit: Color contrast verification with tools
+- [ ] TXXX [P] Performance audit: Run Lighthouse on all pages (target ≥ 90)
+- [ ] TXXX [P] SEO audit: Verify all pages have title, description, sitemap entry
+- [ ] TXXX TypeScript audit: Run `npm run typecheck` and fix all errors
+- [ ] TXXX Code review: Verify no magic numbers, all tokens from design system
+- [ ] TXXX Test coverage: Verify critical paths have unit tests (≥ 80% coverage)
+
 ---
 
 ## Dependencies & Execution Order
