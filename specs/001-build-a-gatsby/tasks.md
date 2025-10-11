@@ -94,13 +94,13 @@
 
 ### Implementation for User Story 2
 
-- [ ] T035 [US2] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/chi-siamo.mdx` with frontmatter (title: "Chi Siamo", description, slug: /chi-siamo, date, navOrder: 10)
-- [ ] T036 [US2] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/chi-siamo.tsx` to chi-siamo.mdx preserving all text structure
-- [ ] T037 [US2] Organize content with clear heading hierarchy (## La Nostra Storia, ## I Nostri Valori, ## Il Nostro Team)
-- [ ] T038 [US2] Add Card components for highlighting organizational values using design system components
-- [ ] T039 [US2] Add Button components at page end for next steps (contact, donate, become member)
-- [ ] T040 [US2] Verify /chi-siamo page renders with proper semantic HTML and heading structure
-- [ ] T041 [US2] Verify page is accessible in main navigation menu from Header component
+- [X] T035 [US2] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/chi-siamo.mdx` with frontmatter (title: "Chi Siamo", description, slug: /chi-siamo, date, navOrder: 10)
+- [X] T036 [US2] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/chi-siamo.tsx` to chi-siamo.mdx preserving all text structure
+- [X] T037 [US2] Organize content with clear heading hierarchy (## La Nostra Storia, ## I Nostri Valori, ## Il Nostro Team)
+- [X] T038 [US2] Add Card components for highlighting organizational values using design system components
+- [X] T039 [US2] Add Button components at page end for next steps (contact, donate, become member)
+- [X] T040 [US2] Verify /chi-siamo page renders with proper semantic HTML and heading structure
+- [X] T041 [US2] Verify page is accessible in main navigation menu from Header component
 
 **Checkpoint**: Chi Siamo page is complete with organization information and clear next steps
 
@@ -114,13 +114,13 @@
 
 ### Implementation for User Story 3
 
-- [ ] T042 [US3] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/servizi.mdx` with frontmatter (title: "Servizi", description, slug: /servizi, date, navOrder: 20)
-- [ ] T043 [US3] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/servizi.tsx` to servizi.mdx
-- [ ] T044 [US3] Structure services list with heading per service (## Servizio 1, ## Servizio 2, etc.)
-- [ ] T045 [US3] Use Card components to display each service with description, eligibility, and access information
-- [ ] T046 [US3] Add contact information or next steps for each service
-- [ ] T047 [US3] Verify /servizi page renders with all services listed and accessible
-- [ ] T048 [US3] Verify page appears in navigation menu with correct order
+- [X] T042 [US3] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/servizi.mdx` with frontmatter (title: "Servizi", description, slug: /servizi, date, navOrder: 20)
+- [X] T043 [US3] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/servizi.tsx` to servizi.mdx
+- [X] T044 [US3] Structure services list with heading per service (## Servizio 1, ## Servizio 2, etc.)
+- [X] T045 [US3] Use Card components to display each service with description, eligibility, and access information
+- [X] T046 [US3] Add contact information or next steps for each service
+- [X] T047 [US3] Verify /servizi page renders with all services listed and accessible
+- [X] T048 [US3] Verify page appears in navigation menu with correct order
 
 **Checkpoint**: Servizi page is complete with comprehensive service information
 
@@ -134,14 +134,14 @@
 
 ### Implementation for User Story 4
 
-- [ ] T049 [US4] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/donate.mdx` with frontmatter (title: "Dona Ora", description, slug: /donate, date, navOrder: 30)
-- [ ] T050 [US4] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/donate.tsx` to donate.mdx
-- [ ] T051 [US4] Display bank account details (IBAN) prominently using clear formatting and headings
-- [ ] T052 [US4] Display organization tax code (codice fiscale) clearly for tax deduction purposes
-- [ ] T053 [US4] Add section explaining how donations are used and impact transparency
-- [ ] T054 [US4] Add section with instructions for obtaining donation receipts for tax purposes
-- [ ] T055 [US4] Verify /donate page displays IBAN and codice fiscale clearly and is easily readable
-- [ ] T056 [US4] Test that page is accessible from homepage CTA buttons
+- [X] T049 [US4] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/donate.mdx` with frontmatter (title: "Dona Ora", description, slug: /donate, date, navOrder: 30)
+- [X] T050 [US4] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/donate.tsx` to donate.mdx
+- [X] T051 [US4] Display bank account details (IBAN) prominently using clear formatting and headings
+- [X] T052 [US4] Display organization tax code (codice fiscale) clearly for tax deduction purposes
+- [X] T053 [US4] Add section explaining how donations are used and impact transparency
+- [X] T054 [US4] Add section with instructions for obtaining donation receipts for tax purposes
+- [X] T055 [US4] Verify /donate page displays IBAN and codice fiscale clearly and is easily readable
+- [X] T056 [US4] Test that page is accessible from homepage CTA buttons
 
 **Checkpoint**: Donate page is complete with clear payment instructions and transparency information
 
@@ -155,14 +155,14 @@
 
 ### Implementation for User Story 5
 
-- [ ] T057 [US5] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/5x1000.mdx` with frontmatter (title: "5x1000", description, slug: /5x1000, date, navOrder: 40)
-- [ ] T058 [US5] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/5x1000.tsx` to 5x1000.mdx
-- [ ] T059 [US5] Display codice fiscale 91298160374 prominently at top of page with large, readable font
-- [ ] T060 [US5] Add step-by-step instructions for filling out 5x1000 section on tax forms
-- [ ] T061 [US5] Include guidance for both online and paper tax declaration methods
-- [ ] T062 [US5] Add contact information for assistance with 5x1000 designation
-- [ ] T063 [US5] Verify /5x1000 page displays codice fiscale prominently and instructions are clear
-- [ ] T064 [US5] Test that page is accessible from homepage CTA and navigation menu
+- [X] T057 [US5] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/5x1000.mdx` with frontmatter (title: "5x1000", description, slug: /5x1000, date, navOrder: 40)
+- [X] T058 [US5] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/5x1000.tsx` to 5x1000.mdx
+- [X] T059 [US5] Display codice fiscale 91298160374 prominently at top of page with large, readable font
+- [X] T060 [US5] Add step-by-step instructions for filling out 5x1000 section on tax forms
+- [X] T061 [US5] Include guidance for both online and paper tax declaration methods
+- [X] T062 [US5] Add contact information for assistance with 5x1000 designation
+- [X] T063 [US5] Verify /5x1000 page displays codice fiscale prominently and instructions are clear
+- [X] T064 [US5] Test that page is accessible from homepage CTA and navigation menu
 
 **Checkpoint**: 5x1000 page is complete with clear tax designation instructions
 
@@ -176,14 +176,14 @@
 
 ### Implementation for User Story 6
 
-- [ ] T065 [US6] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/diventa-socio.mdx` with frontmatter (title: "Diventa Socio", description, slug: /diventa-socio, date, navOrder: 50)
-- [ ] T066 [US6] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/diventa-socio.tsx` to diventa-socio.mdx
-- [ ] T067 [US6] Add section describing membership benefits and responsibilities
-- [ ] T068 [US6] Add section with eligibility criteria and membership fees (if any)
-- [ ] T069 [US6] Add enrollment process with forms or contact information
-- [ ] T070 [US6] Add section about member communications and involvement opportunities
-- [ ] T071 [US6] Verify /diventa-socio page renders with complete membership information
-- [ ] T072 [US6] Verify page appears in navigation menu
+- [X] T065 [US6] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/diventa-socio.mdx` with frontmatter (title: "Diventa Socio", description, slug: /diventa-socio, date, navOrder: 50)
+- [X] T066 [US6] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/diventa-socio.tsx` to diventa-socio.mdx
+- [X] T067 [US6] Add section describing membership benefits and responsibilities
+- [X] T068 [US6] Add section with eligibility criteria and membership fees (if any)
+- [X] T069 [US6] Add enrollment process with forms or contact information
+- [X] T070 [US6] Add section about member communications and involvement opportunities
+- [X] T071 [US6] Verify /diventa-socio page renders with complete membership information
+- [X] T072 [US6] Verify page appears in navigation menu
 
 **Checkpoint**: Diventa Socio page is complete with membership information and enrollment process
 
@@ -197,15 +197,15 @@
 
 ### Implementation for User Story 7
 
-- [ ] T073 [US7] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/documenti.mdx` with frontmatter (title: "Documenti", description, slug: /documenti, date, navOrder: 60)
-- [ ] T074 [US7] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/documenti.tsx` to documenti.mdx
-- [ ] T075 [US7] Create `/Users/userone/wa/it.assonuovavita.www/src/components/DocumentLink.tsx` component with props for title, description, href, fileSize, date
-- [ ] T076 [US7] Create `/Users/userone/wa/it.assonuovavita.www/src/components/DocumentLink.module.css` with styles for document links
-- [ ] T077 [US7] Add DocumentLink component to MDXProvider in gatsby-browser.tsx and gatsby-ssr.tsx
-- [ ] T078 [US7] Organize documents by category (## Governance, ## Forms, ## Reports) in documenti.mdx
-- [ ] T079 [US7] Use DocumentLink components for each document with appropriate metadata
-- [ ] T080 [US7] Verify /documenti page renders with all documents listed and links functional
-- [ ] T081 [US7] Test document download functionality by clicking links
+- [X] T073 [US7] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/documenti.mdx` with frontmatter (title: "Documenti", description, slug: /documenti, date, navOrder: 60)
+- [X] T074 [US7] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/documenti.tsx` to documenti.mdx
+- [X] T075 [US7] Create `/Users/userone/wa/it.assonuovavita.www/src/components/DocumentLink.tsx` component with props for title, description, href, fileSize, date
+- [X] T076 [US7] Create `/Users/userone/wa/it.assonuovavita.www/src/components/DocumentLink.module.css` with styles for document links
+- [X] T077 [US7] Add DocumentLink component to MDXProvider in gatsby-browser.tsx and gatsby-ssr.tsx
+- [X] T078 [US7] Organize documents by category (## Governance, ## Forms, ## Reports) in documenti.mdx
+- [X] T079 [US7] Use DocumentLink components for each document with appropriate metadata
+- [X] T080 [US7] Verify /documenti page renders with all documents listed and links functional
+- [X] T081 [US7] Test document download functionality by clicking links
 
 **Checkpoint**: Documenti page is complete with categorized, accessible documents
 

@@ -85,7 +85,7 @@
 ### Functional Requirements
 
 - **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]
+- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
@@ -94,27 +94,6 @@
 
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
-
-### Non-Functional Requirements (Per Constitution)
-
-**Accessibility (WCAG AA):**
-- **NFR-001**: All interactive elements MUST be keyboard accessible with visible focus
-- **NFR-002**: Color contrast MUST meet 4.5:1 (normal text) or 3:1 (large text)
-- **NFR-003**: All images MUST have descriptive alt text
-- **NFR-004**: Forms MUST have associated labels and error messages
-
-**Performance:**
-- **NFR-005**: Lighthouse Performance score MUST be ≥ 90
-- **NFR-006**: Largest Contentful Paint (LCP) MUST be < 2.5s
-- **NFR-007**: Cumulative Layout Shift (CLS) MUST be < 0.1
-
-**SEO:**
-- **NFR-008**: Page MUST have unique title and meta description
-- **NFR-009**: Images MUST use Gatsby image optimization
-
-**TypeScript:**
-- **NFR-010**: All code MUST pass `npm run typecheck` with strict mode
-- **NFR-011**: No usage of `any` types without documented justification
 
 ### Key Entities *(include if feature involves data)*
 
