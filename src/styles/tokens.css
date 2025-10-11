@@ -72,6 +72,10 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
 
+  /* Container */
+  --container-max-width: 1280px;
+  --container-padding: var(--space-6);
+
   /* Border Radius */
   --radius-none: 0;
   --radius-sm: 0.125rem;   /* 2px */

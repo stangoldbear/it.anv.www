@@ -74,13 +74,13 @@
 
 ### Implementation for User Story 1
 
-- [ ] T028 [US1] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/index.mdx` with frontmatter (title, description, slug: /, date, navOrder: 0)
-- [ ] T029 [US1] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/index.tsx` to index.mdx using MDX format
-- [ ] T030 [US1] Add Hero component in index.mdx with mission statement and description
-- [ ] T031 [US1] Add Button components in index.mdx for primary CTAs (Dona Ora, 5x1000, Scopri di Più)
-- [ ] T032 [US1] Verify homepage renders at http://localhost:8000/ with proper semantic HTML structure
-- [ ] T033 [US1] Test keyboard navigation through all interactive elements (links, buttons)
-- [ ] T034 [US1] Test homepage on mobile viewport (375px) to ensure no horizontal scrolling
+- [X] T028 [US1] Create `/Users/userone/wa/it.assonuovavita.www/content/pages/index.mdx` with frontmatter (title, description, slug: /, date, navOrder: 0)
+- [X] T029 [US1] Migrate existing content from `/Users/userone/wa/it.assonuovavita.www/src/pages/index.tsx` to index.mdx using MDX format
+- [X] T030 [US1] Add Hero component in index.mdx with mission statement and description
+- [X] T031 [US1] Add Button components in index.mdx for primary CTAs (Dona Ora, 5x1000, Scopri di Più)
+- [X] T032 [US1] Verify homepage renders at http://localhost:8000/ with proper semantic HTML structure
+- [X] T033 [US1] Test keyboard navigation through all interactive elements (links, buttons)
+- [X] T034 [US1] Test homepage on mobile viewport (375px) to ensure no horizontal scrolling
 
 **Checkpoint**: Homepage is fully functional with mission statement, CTAs, and mobile responsiveness
 
