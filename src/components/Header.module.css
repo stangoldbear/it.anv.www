@@ -1,230 +1,49 @@
 .header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto auto;
-  align-items: center;
-  gap: 8px 16px;
-  padding: 16px 24px;
-  border-bottom: 1px solid var(--border);
-  background-color: var(--bg);
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-4) 0;
+  box-shadow: var(--shadow-md);
 }
 
-.left {
-  grid-column: 1;
-  grid-row: 1 / span 2;
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-}
-
-.title {
-  grid-column: 2;
-  grid-row: 1;
-  color: #000000;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 22px;
-  letter-spacing: -0.05em;
-}
-
-.nav {
-  grid-column: 2;
-  grid-row: 2;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px 18px;
-}
-
-.link {
-  color: var(--brand);
-  text-decoration: none;
-  font-weight: 500;
-  /* Base size for desktop links; will scale fluidly >= 780px */
-  font-size: 16px;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.active {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.cta {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 6px;
-  background-color: var(--accent);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid var(--accent);
-  /* Base font size for CTA; will scale fluidly >= 780px */
-  font-size: 16px;
-}
-
-.cta:hover {
-  filter: brightness(0.95);
 }
 
 .logo {
-  width: 108px;
-  height: auto;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: white;
+  text-decoration: none;
 }
 
-.right {
-  grid-column: 3;
-  grid-row: 1 / span 2;
+.nav {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  gap: var(--space-6);
 }
 
-/* Hamburger button hidden by default (desktop) */
-.menuButton {
-  display: none;
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
+.navLink {
+  color: white;
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-base);
+  transition: background-color var(--transition-fast);
 }
 
-/* Overlay base */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 150ms ease-in-out;
-  z-index: 1000;
+.navLink:hover {
+  background-color: var(--color-primary-dark);
 }
 
-.overlayOpen {
-  opacity: 1;
-  pointer-events: auto;
+.navLink:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
-.overlayOpen .overlayPanel {
-  transform: translateX(0%);
-}
-
-.overlayPanel {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: min(75vw, 300px);
-  height: 100%;
-  background: var(--bg);
-  border-left: 1px solid var(--border);
-  padding: 16px;
-  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
-  transform: translateX(100%);
-  transition: transform 200ms ease-out;
-  display: flex;
-  flex-direction: column;
-}
-
-.overlayNav {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 24px;
-}
-
-.closeButton {
-  appearance: none;
-  background: transparent;
-  border: none;
-  font-size: 28px;
-  line-height: 1;
-  cursor: pointer;
-  align-self: flex-end;
-}
-
-/* Responsive: under 740px switch to hamburger */
-@media (max-width: 740px) {
-  .nav {
-    display: none;
-  }
-
-  .menuButton {
-    display: inline-block;
-  }
-
-  /* Bigger, easier-to-tap overlay items on mobile */
-  .overlayNav {
-    gap: 8px;
-  }
-
-  .overlayNav .link {
-    display: block;
-    font-size: 18px; /* larger text for readability */
-    line-height: 1.4;
-    padding: 12px 8px; /* ~44px min touch target height with line-height */
-    border-radius: 6px;
-  }
-
-  .closeButton {
-    padding: 10px; /* increase hit area */
-    margin: -10px -10px 0 0; /* optical alignment without shifting layout */
-  }
-}
-
-/* Ultra-compact: under 400px, hide title and keep only logo (left) and hamburger (right) visible */
-@media (max-width: 400px) {
-  .title {
-    display: none;
-  }
-
-  .right {
-    justify-content: flex-end;
-  }
-
-  .cta {
-    display: none;
-  }
-}
-
-/* Fluid scaling: from 780px and up, size elements proportionally to viewport width */
-@media (min-width: 780px) {
-  /* Header spacing scales with width */
-  .header {
-    padding: max(16px, 2.0513vw) max(24px, 3.0769vw);
-    gap: max(8px, 1.0256vw) max(16px, 2.0513vw);
-  }
-
-  /* Logo grows proportionally */
-  .logo {
-    width: max(108px, 13.8462vw);
-  }
-
-  /* Title grows proportionally (22px at 780px, then scales) */
-  .title {
-    font-size: max(22px, 2.8205vw);
-    line-height: 1.1;
-  }
-
-  /* Navigation spacing and link size scale */
-  .nav {
-    gap: max(14px, 1.7949vw) max(18px, 2.3077vw);
-  }
-
-  .link {
-    font-size: max(16px, 2.0513vw);
-  }
-
-  /* CTA scales: font-size and paddings grow with width */
-  .cta {
-    font-size: max(16px, 2.0513vw);
-    padding: max(8px, 1.0256vw) max(14px, 1.7949vw);
-    border-radius: max(6px, 0.7692vw);
-  }
-
-  .right {
-    gap: max(8px, 1.0256vw);
-  }
+.navLinkActive {
+  background-color: var(--color-primary-dark);
+  font-weight: var(--font-weight-semibold);
 }

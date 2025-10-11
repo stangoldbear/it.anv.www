@@ -4,10 +4,34 @@
   flex-direction: column;
 }
 
-.container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 24px;
+.main {
   flex: 1 1 auto;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--space-8) var(--container-padding);
+}
+
+/* Ensure proper spacing and semantic structure */
+.main article {
+  max-width: 70ch; /* Optimal reading width */
+  margin: 0 auto;
+}
+
+/* Skip to main content link for accessibility */
+.skipLink {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: var(--z-index-modal);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  border-radius: var(--radius-base);
+}
+
+.skipLink:focus {
+  top: var(--space-4);
 }

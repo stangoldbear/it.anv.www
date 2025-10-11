@@ -5,7 +5,7 @@
 **Status**: Draft
 **Input**: User description: "Build a Gatsby v5 site with MDX pages that mirror http://www.assonuovavita.it sections..."
 
-## User Scenarios & Testing *(mandatory)*
+## User Scenarios & Testing _(mandatory)_
 
 ### User Story 1 - Homepage with Clear Mission (Priority: P1)
 
@@ -135,7 +135,7 @@ A member or stakeholder visits the "Documenti" (Documents) page to download form
 - What if images fail to load? → All images must have descriptive alt text that conveys the meaning even without the image
 - How does the site handle browser translation? → Content should be structured to allow browser auto-translation without breaking layout
 
-## Requirements *(mandatory)*
+## Requirements _(mandatory)_
 
 ### Functional Requirements
 
@@ -155,14 +155,16 @@ A member or stakeholder visits the "Documenti" (Documents) page to download form
 ### Non-Functional Requirements (Per Constitution)
 
 **Accessibility (WCAG AA):**
+
 - **NFR-001**: All interactive elements (links, buttons, forms) MUST be keyboard accessible with visible focus indicators
 - **NFR-002**: Color contrast MUST meet 4.5:1 for normal text, 3:1 for large text and graphical elements
 - **NFR-003**: All images MUST have descriptive alt text in Italian
-- **NFR-004**: Forms (contact, membership) MUST have associated labels and error messages
+- **NFR-004**: If forms are needed (contact, membership) then MUST have associated labels and error messages
 - **NFR-005**: Page structure MUST use semantic HTML landmarks (nav, main, article, footer)
 - **NFR-006**: Heading hierarchy MUST be logical (no skipped levels)
 
 **Performance:**
+
 - **NFR-007**: Lighthouse Performance score MUST be ≥ 90
 - **NFR-008**: Largest Contentful Paint (LCP) MUST be < 2.5s
 - **NFR-009**: Cumulative Layout Shift (CLS) MUST be < 0.1
@@ -170,18 +172,21 @@ A member or stakeholder visits the "Documenti" (Documents) page to download form
 - **NFR-011**: Time to Interactive (TTI) MUST be < 3.8s
 
 **SEO:**
+
 - **NFR-012**: Each page MUST have unique title tag (format: "[Page Name] | Associazione Nuova Vita")
 - **NFR-013**: Each page MUST have unique meta description under 160 characters
 - **NFR-014**: All pages MUST be included in sitemap.xml via gatsby-plugin-sitemap
 - **NFR-015**: Images MUST use Gatsby image optimization (gatsby-plugin-image) where applicable
 
 **TypeScript:**
+
 - **NFR-016**: All components MUST pass `npm run typecheck` with strict mode enabled
 - **NFR-017**: No usage of `any` types without documented justification in code comments
 - **NFR-018**: All component props MUST have TypeScript interfaces defined
 
 **Content Architecture:**
-- **NFR-019**: All editorial content MUST be authored in MDX files within src/pages/
+
+- **NFR-019**: All editorial content MUST be authored in MDX files within /content/pages/
 - **NFR-020**: MDX files MUST use only documented, reusable components from the design system
 - **NFR-021**: No inline styles or one-off components in MDX files
 
@@ -192,7 +197,7 @@ A member or stakeholder visits the "Documenti" (Documents) page to download form
 - **Call-to-Action**: Prominent button or link encouraging specific actions (donate, become member, learn more)
 - **Document**: Downloadable file (PDF, form) with title, description, and file reference
 
-## Success Criteria *(mandatory)*
+## Success Criteria _(mandatory)_
 
 ### Measurable Outcomes
 

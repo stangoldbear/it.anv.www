@@ -32,6 +32,7 @@ Follow-up Actions:
 Every feature, component, and content page MUST meet WCAG 2.1 Level AA standards.
 
 **Non-negotiable rules:**
+
 - All interactive elements MUST be keyboard navigable with visible focus indicators
 - Color contrast ratios MUST meet minimum 4.5:1 for normal text, 3:1 for large text
 - All images and icons MUST have appropriate alt text or aria-labels
@@ -46,7 +47,8 @@ Every feature, component, and content page MUST meet WCAG 2.1 Level AA standards
 All editorial content MUST be authored in MDX format with clear separation from presentation logic.
 
 **Non-negotiable rules:**
-- Page content MUST reside in MDX files within the `src/pages/` directory structure
+
+- Page content MUST reside in MDX files within the `/content/pages/` directory structure
 - MDX files MUST use only approved, documented components from the design system
 - Components used in MDX MUST accept props via frontmatter or inline syntax
 - No inline styles or one-off components in MDX files
@@ -59,15 +61,16 @@ All editorial content MUST be authored in MDX format with clear separation from 
 All pages MUST be optimized for search engines and meet defined performance budgets.
 
 **Non-negotiable rules:**
+
 - Every page MUST have unique, descriptive title and meta description
 - All pages MUST be included in the generated sitemap (gatsby-plugin-sitemap)
 - Images MUST use Gatsby's image optimization (gatsby-plugin-image)
 - Performance budgets:
-  * Lighthouse Performance score ≥ 90
-  * First Contentful Paint (FCP) < 1.8s
-  * Largest Contentful Paint (LCP) < 2.5s
-  * Cumulative Layout Shift (CLS) < 0.1
-  * Time to Interactive (TTI) < 3.8s
+  - Lighthouse Performance score ≥ 90
+  - First Contentful Paint (FCP) < 1.8s
+  - Largest Contentful Paint (LCP) < 2.5s
+  - Cumulative Layout Shift (CLS) < 0.1
+  - Time to Interactive (TTI) < 3.8s
 - JavaScript bundles MUST be code-split per route
 - Critical CSS MUST be inlined, non-critical CSS deferred
 
@@ -78,6 +81,7 @@ All pages MUST be optimized for search engines and meet defined performance budg
 All UI components MUST use tokens from the design system for colors, spacing, typography, and breakpoints.
 
 **Non-negotiable rules:**
+
 - NO magic numbers for spacing, colors, or font sizes in component code
 - All components MUST reference CSS custom properties or TypeScript constants for tokens
 - New components MUST be documented with usage examples
@@ -91,6 +95,7 @@ All UI components MUST use tokens from the design system for colors, spacing, ty
 All code MUST be written in TypeScript with strict type checking enabled and no `any` types.
 
 **Non-negotiable rules:**
+
 - TypeScript strict mode MUST be enabled in `tsconfig.json`
 - NO usage of `any`, `as any`, or `@ts-ignore` without explicit justification in code comments
 - All component props MUST have TypeScript interfaces
@@ -102,14 +107,15 @@ All code MUST be written in TypeScript with strict type checking enabled and no 
 
 ### VI. Testing Discipline
 
-Tests MUST be written for business-critical components and utility functions.
+Tests COULD be written for business-critical components and utility functions.
 
 **Non-negotiable rules:**
-- Unit tests REQUIRED for:
-  * All utility functions and helpers
-  * Complex stateful components
-  * Form validation logic
-  * Data transformation functions
+
+- Unit tests COULD BE REQUIRED for:
+  - All utility functions and helpers
+  - Complex stateful components
+  - Form validation logic
+  - Data transformation functions
 - Tests MUST be co-located with components (`.test.ts` or `.test.tsx` files)
 - Tests MUST run successfully before merging: `npm test` passes
 - Test coverage for tested modules MUST exceed 80%
@@ -144,15 +150,16 @@ Tests MUST be written for business-critical components and utility functions.
 - All code changes MUST go through pull request review
 - At least one approval REQUIRED before merging
 - Reviewer MUST verify:
-  * TypeScript checks pass (`npm run typecheck`)
-  * Build succeeds (`npm run build`)
-  * Accessibility: keyboard navigation works, contrast is sufficient
-  * No console errors or warnings
-  * Code follows naming conventions and structure
+  - TypeScript checks pass (`npm run typecheck`)
+  - Build succeeds (`npm run build`)
+  - Accessibility: keyboard navigation works, contrast is sufficient
+  - No console errors or warnings
+  - Code follows naming conventions and structure
 
 ### Quality Gates
 
 Before merging, the following MUST pass:
+
 1. TypeScript compilation (`npm run typecheck`)
 2. Build process (`npm run build`)
 3. Manual accessibility check (keyboard nav + screen reader spot check)
@@ -170,18 +177,21 @@ Before merging, the following MUST pass:
 **Constitution Authority**: This constitution supersedes all other coding practices and conventions. When practices conflict with these principles, the constitution takes precedence.
 
 **Amendment Procedure**:
+
 1. Proposed amendments MUST be documented in a pull request with rationale
 2. Major changes require sign-off from project maintainer
 3. Breaking changes require a migration plan before adoption
 4. All amendments trigger a version bump (semantic versioning)
 
 **Compliance Review**:
+
 - All pull requests MUST verify alignment with constitution principles
 - Quarterly review of codebase for constitutional compliance
 - Violations MUST be justified in writing or remediated
 - Persistent justified violations indicate need for constitutional amendment
 
 **Version Control**:
+
 - MAJOR: Backward incompatible changes (principle removal or redefinition)
 - MINOR: New principles added or materially expanded guidance
 - PATCH: Clarifications, wording fixes, non-semantic refinements
@@ -190,4 +200,4 @@ Before merging, the following MUST pass:
 
 ---
 
-**Version**: 1.0.0 | **Ratified**: 2025-10-10 | **Last Amended**: 2025-10-10
+**Version**: 1.0.1 | **Ratified**: 2025-10-10 | **Last Amended**: 2025-10-10

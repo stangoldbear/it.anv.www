@@ -25,9 +25,9 @@
 
 **Purpose**: Project initialization and directory structure
 
-- [ ] T001 Create `/Users/userone/wa/it.assonuovavita.www/content/pages/` directory for MDX content files
-- [ ] T002 Create `/Users/userone/wa/it.assonuovavita.www/src/templates/` directory for page templates
-- [ ] T003 Create `/Users/userone/wa/it.assonuovavita.www/src/types/` directory for TypeScript definitions
+- [X] T001 Create `/Users/userone/wa/it.assonuovavita.www/content/pages/` directory for MDX content files
+- [X] T002 Create `/Users/userone/wa/it.assonuovavita.www/src/templates/` directory for page templates
+- [X] T003 Create `/Users/userone/wa/it.assonuovavita.www/src/types/` directory for TypeScript definitions
 
 ---
 
@@ -37,30 +37,30 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T004 Update `/Users/userone/wa/it.assonuovavita.www/gatsby-config.ts` to configure gatsby-plugin-mdx with gatsby-remark-images and gatsby-remark-copy-linked-files plugins
-- [ ] T005 Update `/Users/userone/wa/it.assonuovavita.www/gatsby-config.ts` to add gatsby-source-filesystem for content/pages/ directory
-- [ ] T006 [P] Create `/Users/userone/wa/it.assonuovavita.www/src/styles/tokens.css` with design tokens (colors, spacing, typography, breakpoints) as CSS custom properties
-- [ ] T007 [P] Create `/Users/userone/wa/it.assonuovavita.www/src/styles/reset.css` with CSS reset/normalize
-- [ ] T008 [P] Update `/Users/userone/wa/it.assonuovavita.www/src/styles/global.css` to import tokens.css and reset.css
-- [ ] T009 [P] Create `/Users/userone/wa/it.assonuovavita.www/src/types/mdx.d.ts` with TypeScript type declarations for MDX modules
-- [ ] T010 [P] Create `/Users/userone/wa/it.assonuovavita.www/src/types/frontmatter.ts` with PageFrontmatter interface matching mdx-frontmatter-schema.yaml
-- [ ] T011 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Header.tsx` with navigation component using GraphQL query for pages with showInNav: true
-- [ ] T012 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Header.module.css` with styles using design tokens for navigation
-- [ ] T013 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Footer.tsx` with organization contact information and links
-- [ ] T014 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Footer.module.css` with styles using design tokens for footer
-- [ ] T015 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Layout.tsx` with Header, Footer, and SEO (react-helmet) integration
-- [ ] T016 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Layout.module.css` with main layout styles using design tokens
-- [ ] T017 Create `/Users/userone/wa/it.assonuovavita.www/src/templates/Page.tsx` with GraphQL query for MDX frontmatter and children rendering
-- [ ] T018 Create `/Users/userone/wa/it.assonuovavita.www/src/templates/Page.module.css` with article/header/main semantic structure styles
-- [ ] T019 Create `/Users/userone/wa/it.assonuovavita.www/gatsby-node.ts` with createPages API implementation to programmatically create pages from MDX files using Page template
-- [ ] T020 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Button.tsx` with TypeScript interface for props (label, href, variant, external)
-- [ ] T021 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Button.module.css` with styles for primary/secondary/outline variants using design tokens
-- [ ] T022 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Hero.tsx` with props for title, description, and children (CTA buttons)
-- [ ] T023 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Hero.module.css` with hero section styles using design tokens
-- [ ] T024 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Card.tsx` with props for title, content, and optional image
-- [ ] T025 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Card.module.css` with card component styles using design tokens
-- [ ] T026 Create `/Users/userone/wa/it.assonuovavita.www/gatsby-browser.tsx` with MDXProvider to inject Button, Hero, and Card components globally
-- [ ] T027 Create `/Users/userone/wa/it.assonuovavita.www/gatsby-ssr.tsx` with same MDXProvider configuration for server-side rendering
+- [X] T004 Update `/Users/userone/wa/it.assonuovavita.www/gatsby-config.ts` to configure gatsby-plugin-mdx with gatsby-remark-images and gatsby-remark-copy-linked-files plugins
+- [X] T005 Update `/Users/userone/wa/it.assonuovavita.www/gatsby-config.ts` to add gatsby-source-filesystem for content/pages/ directory
+- [X] T006 [P] Create `/Users/userone/wa/it.assonuovavita.www/src/styles/tokens.css` with design tokens (colors, spacing, typography, breakpoints) as CSS custom properties
+- [X] T007 [P] Create `/Users/userone/wa/it.assonuovavita.www/src/styles/reset.css` with CSS reset/normalize
+- [X] T008 [P] Update `/Users/userone/wa/it.assonuovavita.www/src/styles/global.css` to import tokens.css and reset.css
+- [X] T009 [P] Create `/Users/userone/wa/it.assonuovavita.www/src/types/mdx.d.ts` with TypeScript type declarations for MDX modules
+- [X] T010 [P] Create `/Users/userone/wa/it.assonuovavita.www/src/types/frontmatter.ts` with PageFrontmatter interface matching mdx-frontmatter-schema.yaml
+- [X] T011 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Header.tsx` with navigation component using GraphQL query for pages with showInNav: true
+- [X] T012 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Header.module.css` with styles using design tokens for navigation
+- [X] T013 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Footer.tsx` with organization contact information and links
+- [X] T014 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Footer.module.css` with styles using design tokens for footer
+- [X] T015 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Layout.tsx` with Header, Footer, and SEO (react-helmet) integration
+- [X] T016 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Layout.module.css` with main layout styles using design tokens
+- [X] T017 Create `/Users/userone/wa/it.assonuovavita.www/src/templates/Page.tsx` with GraphQL query for MDX frontmatter and children rendering
+- [X] T018 Create `/Users/userone/wa/it.assonuovavita.www/src/templates/Page.module.css` with article/header/main semantic structure styles
+- [X] T019 Create `/Users/userone/wa/it.assonuovavita.www/gatsby-node.ts` with createPages API implementation to programmatically create pages from MDX files using Page template
+- [X] T020 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Button.tsx` with TypeScript interface for props (label, href, variant, external)
+- [X] T021 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Button.module.css` with styles for primary/secondary/outline variants using design tokens
+- [X] T022 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Hero.tsx` with props for title, description, and children (CTA buttons)
+- [X] T023 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Hero.module.css` with hero section styles using design tokens
+- [X] T024 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Card.tsx` with props for title, content, and optional image
+- [X] T025 Create `/Users/userone/wa/it.assonuovavita.www/src/components/Card.module.css` with card component styles using design tokens
+- [X] T026 Create `/Users/userone/wa/it.assonuovavita.www/gatsby-browser.tsx` with MDXProvider to inject Button, Hero, and Card components globally
+- [X] T027 Create `/Users/userone/wa/it.assonuovavita.www/gatsby-ssr.tsx` with same MDXProvider configuration for server-side rendering
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 

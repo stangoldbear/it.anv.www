@@ -1,9 +1,26 @@
-import * as React from "react";
-import type { GatsbySSR } from "gatsby";
-import Layout from "./src/components/Layout";
+import * as React from 'react';
+import { MDXProvider } from '@mdx-js/react';
+import type { GatsbySSR } from 'gatsby';
 
-export const wrapPageElement: GatsbySSR["wrapPageElement"] = ({ element }) => {
-  return <Layout>{element}</Layout>;
+// Import design system components
+import Button from './src/components/Button';
+import Hero from './src/components/Hero';
+import Card from './src/components/Card';
+import DocumentLink from './src/components/DocumentLink';
+
+/**
+ * MDX Component Mapping for SSR
+ *
+ * These components are available globally in all MDX files
+ * during server-side rendering.
+ */
+const components = {
+  Button,
+  Hero,
+  Card,
+  DocumentLink,
 };
 
-export default {};
+export const wrapRootElement: GatsbySSR['wrapRootElement'] = ({ element }) => {
+  return <MDXProvider components={components}>{element}</MDXProvider>;
+};
